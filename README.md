@@ -15,10 +15,10 @@ This is the code for paper :  **Federated Learning on Non-IID and Globally Long-
 
 | Parameter     | Description                                              |
 | ------------- | -------------------------------------------------------- |
-| `dataset`     | Dataset to use. Options: `cifar10`,`cifar100`, `fmnist`. |
+| `dataset`     | Dataset to use. Options: `cifar10`,`cifar100`, `imagenet`. |
 | `lr`          | Learning rate of model.                                  |
-| `v_lr`        | Learning rate of class re-weighting network.                   |
-| `s_lr`        | Learning rate of instance re-weighting network.                   |
+| `v_lr`        | Learning rate of the class re-weighting network.                   |
+| `s_lr`        | Learning rate of the instance re-weighting network.                   |
 | `local_bs`    | Local batch size of training.                            |
 | `test_bs`     | Test batch size .                                        |
 | `num_users`   | Number of clients.                                       |
@@ -44,6 +44,7 @@ python main.py --dataset=cifar10 \
     --s_lr=0.0001\
     --epochs=200\
     --local_ep=5 \
+    --local_bs=64\
     --num_users=20 \
     --frac=0.5\
     --num_meta=10 \
