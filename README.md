@@ -38,7 +38,7 @@ This is the code for paper :  **Federated Learning on Non-IID and Globally Long-
 Here is an example to run FedARN on CIFAR-10 with imb_fartor=0.01:
 
 ```
-python main.py --dataset=cifar10 \
+python main_fedren.py --dataset=cifar10 \
     --lr=0.01 \
     --v_lr=0.01\
     --s_lr=0.0001\
